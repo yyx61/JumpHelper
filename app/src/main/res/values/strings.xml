@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">跳一跳助手</string>
+    <string name="acc_desc">点击两点测量距离，自动注入长按完成跳跃</string>
+</resources>

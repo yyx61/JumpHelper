@@ -1,0 +1,6 @@
+// 如果 Sync 报 "AGP X requires Gradle Y"，把下面这行的版本号
+// 改成你新建空工程时模板里的那个版本号即可（只改这一行）。
+// 常见搭配：AGP 8.1.4 + Gradle 8.x / AGP 7.4.2 + Gradle 7.6
+plugins {
+    id 'com.android.application' version '8.1.4' apply false
+}
