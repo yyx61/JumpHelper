@@ -1,0 +1,38 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.example.jumphelper'
+    compileSdk 34          // 如果 IDE 只装了 android-33，把这里和 targetSdk 一起改成 33
+
+    defaultConfig {
+        applicationId "com.example.jumphelper"
+        minSdk 24          // 必须 >= 24：dispatchGesture 需要 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+}
+
+// 全部使用系统类（android.app.Activity / android.widget.*），
+// 不依赖 androidx，能省掉几十 MB 下载和一堆 Sync 失败风险。
+dependencies {
+}
